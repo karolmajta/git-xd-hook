@@ -1,4 +1,17 @@
-#!/bin/sh
+#!/bin/bash
 
-sed -i '1 s/$/ xD/' $1
+unamestr=$(uname)
+commitmsg=$(head -n 1 $1)
+
+echo $commitmsg
+if [[ "$commitmsg" =~ .*xD$ ]]; then
+    exit;
+fi
+
+
+if [[ "$unamestr" == 'Linux' || "$unamestr" == 'FreeBSD' ]]; then
+    sed -i '1 s/$/ xD/' $1
+elif [[ "$unamestr" == 'Darwin' ]]; then
+    sed -i '' '1 s/$/ xD/' $1
+fi
 
