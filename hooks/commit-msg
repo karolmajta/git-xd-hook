@@ -1,4 +1,9 @@
 #!/bin/sh
 
-sed -i '1 s/$/ xD/' $1
+COMMIT_EDITMSG=$(cat $1)
 
+if [[ "$COMMIT_EDITMSG" =~ .*xD$ ]]; then
+    exit;
+fi
+
+echo "$COMMIT_EDITMSG xD" > $1
