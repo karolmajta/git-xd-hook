@@ -3,7 +3,6 @@
 unamestr=$(uname)
 commitmsg=$(head -n 1 $1)
 
-echo $commitmsg
 if [[ "$commitmsg" =~ .*xD$ ]]; then
     exit;
 fi
