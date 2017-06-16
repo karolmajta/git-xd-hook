@@ -6,4 +6,4 @@ if [[ "$COMMIT_EDITMSG" =~ .*xD$ ]]; then
     exit;
 fi
 
-sed -i '' '1 s/$/ xD/' $1
+echo "$COMMIT_EDITMSG xD" > $1
