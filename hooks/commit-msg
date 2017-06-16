@@ -3,14 +3,13 @@
 unamestr=$(uname)
 commitmsg=$(head -n 1 $1)
 
-if [[ "$commitmsg" =~ .*xD$ ]]; then
+if [[ "$commitmsg" =~ .*😂$ ]]; then
     exit;
 fi
 
 
 if [[ "$unamestr" == 'Linux' || "$unamestr" == 'FreeBSD' ]]; then
-    sed -i '1 s/$/ xD/' $1
+    sed -i '1 s/$/ 😂/' $1
 elif [[ "$unamestr" == 'Darwin' ]]; then
-    sed -i '' '1 s/$/ xD/' $1
+    sed -i '' '1 s/$/ 😂/' $1
 fi
-
