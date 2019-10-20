@@ -1,4 +1,4 @@
-# GIT xD
+# GIT 😂
 
 Don't you think our commit messages are a bit too serious? Since I started
 using `😂` with my commit messages my life in the company became ~152% better 😂
@@ -12,12 +12,12 @@ communication inside your team much more humane 😂
 
 Start adding `😂` to all your commit messages!
 
-## Installing xD
+## Installing 😂
 
 Just copy `hooks/commit-msg` from this repo to your local `.git/hooks/` and
 enjoy 😂
 
-## TODO xD
+## TODO 😂
 
 Please contribute 😂
 
